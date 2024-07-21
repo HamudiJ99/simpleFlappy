@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.pipe').forEach(pipe => pipe.remove());
   
       document.addEventListener('keydown', startGameOnKeyPress, { once: true });
+      gameContainer.addEventListener('touchstart', startGameOnKeyPress, { once: true });
       requestAnimationFrame(gameLoop);
     }
   
@@ -214,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     document.addEventListener('keydown', flap);
+    gameContainer.addEventListener('touchstart', flap);
     restartButton.addEventListener('click', startGame);
     menuButton.addEventListener('click', () => {
       gameOverScreen.style.display = 'none';

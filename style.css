@@ -1,0 +1,160 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #70c5ce;
+    overflow: hidden;
+  }
+  
+  .menu-container {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('DALL·E 2024-07-21 15.30.18 - Create a cartoonish landscape image suitable for use as a background in a web browser game. The scene should feature a bright, clear blue sky with sof.webp') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .difficulty-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .difficulty-button.easy {
+    background-color: #4CAF50; /* Green */
+  }
+  
+  .difficulty-button.normal {
+    background-color: #2196F3; /* Blue */
+  }
+  
+  .difficulty-button.hard {
+    background-color: #f44336; /* Red */
+  }
+  
+  .difficulty-button:hover {
+    opacity: 0.8;
+  }
+  
+  .sound-toggle {
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .game-container {
+    width: 400px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .bird {
+    width: 40px;
+    height: 40px;
+    background: url('bird.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+  }
+  
+  .pipe {
+    width: 40px; /* Thinner pipes */
+    height: 400px;
+    background-color: green;
+    position: absolute;
+    top: 0;
+  }
+  
+  .pipe.bottom {
+    top: auto;
+    bottom: 0;
+  }
+  
+  
+  .score {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    font-weight: bold;
+    z-index: 1;
+  }
+  
+  .game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .game-over-text {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .final-score {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .restart-button,
+  .menu-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .restart-button {
+    background-color: #ff9800; /* Orange */
+    color: white;
+  }
+  
+  .menu-button {
+    background-color: #9e9e9e; /* Grey */
+    color: white;
+  }
+  
+  .restart-button:hover,
+  .menu-button:hover {
+    opacity: 0.8;
+  }
+  

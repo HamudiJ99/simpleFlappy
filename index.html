@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- Disable zooming -->
   <title>Flappy Bird</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,15 +13,18 @@
     <button class="difficulty-button easy" data-difficulty="easy">Easy</button>
     <button class="difficulty-button normal" data-difficulty="normal">Normal</button>
     <button class="difficulty-button hard" data-difficulty="hard">Difficult</button>
+    <button class="highscore-button" id="highscoreButton">High Scores</button>
     <div class="sound-toggle">
       <label for="sound">Sound:</label>
       <input type="checkbox" id="sound" checked>
     </div>
   </div>
+  
   <div class="game-container" id="gameContainer" style="display: none;">
     <img src="cropped_background.png" alt="background" class="background">
     <div class="bird" id="bird"></div>
     <div class="score" id="score">0</div>
+    <div class="start-label" id="startLabel">Press to start</div>
     <div class="game-over" id="gameOver" style="display: none;">
       <div class="game-over-text">Game Over</div>
       <div class="final-score" id="finalScore"></div>
@@ -29,6 +32,13 @@
       <button class="menu-button" id="menuButton">Menu</button>
     </div>
   </div>
+  
+  <div class="highscore-container" id="highscoreContainer" style="display: none;">
+    <h1>High Scores</h1>
+    <ol id="highscoreList"></ol>
+    <button class="menu-button" id="backToMenuButton">Back to Menu</button>
+  </div>
+  
   <script src="script.js"></script>
 </body>
 </html>
